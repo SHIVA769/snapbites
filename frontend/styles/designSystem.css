@@ -1,0 +1,117 @@
+:root {
+    /* Premium Industry Palette */
+    --p-bg: #0D0D0D;
+    --p-surface: #1A1A1A;
+    --p-primary: #FF4500;
+    /* Precision Orange */
+    --p-accent: #333333;
+    --p-text: #FFFFFF;
+    --p-text-muted: #888888;
+    --p-glass: rgba(255, 255, 255, 0.03);
+    --p-border: rgba(255, 255, 255, 0.08);
+
+    /* Spacing & Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+}
+
+body {
+    background-color: var(--p-bg);
+    color: var(--p-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.01em;
+}
+
+/* Premium Card (Industry Standard) */
+.premium-card {
+    background: var(--p-surface);
+    border: 1px solid var(--p-border);
+    border-radius: var(--radius-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(16px);
+}
+
+.premium-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* Refined Glass */
+.frosted-glass {
+    background: var(--p-glass);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--p-border);
+}
+
+/* Professional Button */
+.btn-premium {
+    background: var(--p-primary);
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-premium:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-premium:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+/* Subtle Text Gradient */
+.text-gradient-premium {
+    background: linear-gradient(90deg, var(--p-primary), #FF7F50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #28a745;
+    /* Green for active */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+}
+
+/* Clean Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-premium-fade {
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Content Focus Utils */
+.content-mask {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.text-industry-header {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-size: 2.5rem;
+}
